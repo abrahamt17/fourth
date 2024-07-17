@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Android Emulator",
+        "type": "shell",
+        "command": "emulator -avd 7a -read-only",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Run React Native",
+        "type": "shell",
+        "command": "npx react-native run-android",
+        "problemMatcher": [],
+        "dependsOn": "Start Android Emulator",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  
